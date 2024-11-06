@@ -58,7 +58,7 @@ if selected == "Chatbot (with history)":
             st.markdown(gemini_response.text)
 
 # Check if the image path works correctly with st.image for background (no caption)
-image_path = r"C:\Users\delve\OneDrive\Desktop\Practice Workbooks\Gen AI\Gemini Pro Apps\Us.jpeg"
+image_path = "https://github.com/Debdeveloper93/AI-Chatbot-Apps-Chatbot-embedding-QA-/raw/main/static/Us.jpeg"
 st.image(image_path)  # No caption here
 
 # Now apply the background image using CSS (no caption)
@@ -116,7 +116,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
 # IMAGE CAPTIONING PAGE
 
 if selected == "Image Captioning":
@@ -162,10 +161,9 @@ if selected == "Embed Text":
 if selected ==  "Ask me anything":
     st.title("Ask me anything")
 
-
     # text box to enter prompt
-
     user_prompt = st.text_area(label = "",placeholder="Ask Gemini...")
+
     if st.button("Get an answer"):
         response = gemini_pro_response(user_prompt)
         st.markdown(response)
