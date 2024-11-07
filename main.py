@@ -38,7 +38,7 @@ if selected == "Chatbot (with history)":
         st.session_state.chat_session = model.start_chat(history=[])
 
     # Title for Streamlit page
-    st.title("🌙 Udita's BOT")
+    st.title("Genius BOT")
 
     # Display the chat history
     for message in st.session_state.chat_session.history:
