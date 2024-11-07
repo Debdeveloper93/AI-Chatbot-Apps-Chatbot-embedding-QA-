@@ -57,65 +57,6 @@ if selected == "Chatbot (with history)":
         with st.chat_message("assistant"):
             st.markdown(gemini_response.text)
 
-# Check if the image path works correctly with st.image for background (no caption)
-image_path = "https://github.com/Debdeveloper93/AI-Chatbot-Apps-Chatbot-embedding-QA-/raw/main/static/Us.jpeg"
-st.image(image_path)  # No caption here
-
-# Now apply the background image using CSS (no caption)
-image_url = f"url({image_path})"
-
-# Custom CSS for the dark theme and background image
-st.markdown(
-    f"""
-    <style>
-        body {{
-            background-image: {image_url};
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100%;
-            color: #F0F0F0;  /* Light gray text for contrast */
-        }}
-
-        .stApp {{
-            background-color: rgba(0, 0, 0, 0.8);  /* Dark overlay for the app */
-        }}
-
-        .css-1v3fvcr {{
-            background-color: rgba(0, 0, 0, 0.7);  /* Dark background for sidebar */
-        }}
-
-        .stChatMessage {{
-            background-color: rgba(40, 40, 40, 0.8);  /* Darker message bubbles */
-            border-radius: 10px;
-            color: white;  /* Light text for the message bubbles */
-        }}
-
-        .stChatMessage.assistant {{
-            background-color: rgba(20, 20, 20, 0.8);  /* Slightly darker bubble for assistant */
-        }}
-
-        .stChatMessage.user {{
-            background-color: rgba(60, 60, 60, 0.8);  /* Slightly lighter bubble for user */
-        }}
-
-        .stTextInput, .stChatInput {{
-            background-color: rgba(30, 30, 30, 0.9);  /* Dark input fields */
-            color: white;
-        }}
-
-        .stTextInput input, .stChatInput input {{
-            color: white;  /* Light text in input field */
-        }}
-
-        .stTitle, .stSubheader, .stMarkdown {{
-            color: white;  /* Make title and headings white */
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # IMAGE CAPTIONING PAGE
 
 if selected == "Image Captioning":
